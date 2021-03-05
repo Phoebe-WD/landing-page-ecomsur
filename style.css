@@ -132,6 +132,7 @@ ul p{
 footer{
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
     text-align: center;
     color: white;
     font-family: 'Courier New', Courier, monospace;
@@ -154,6 +155,14 @@ footer a:hover{
 
 /* Responsive */
 
+@media screen and (max-width: 1200px){
+    #ecomsur-logo{
+        margin-left: 12px;
+    }
+
+}
+
+
 @media screen and (max-width: 1000px){
     body{
         width: 100%;
@@ -162,7 +171,8 @@ footer a:hover{
         width: 100%;
     }
     h1{
-        margin-left: 20px;
+        margin-right: 70px;
+        font-size: 28px;
         margin-top: 45px;
         text-align: center;
     }
@@ -170,11 +180,15 @@ footer a:hover{
         margin-left: 18px;
     }
     #content{
+        margin-left: -20px;
         width: 100%;
+    }
+    #search-country{
+        margin-left: -50px;
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 760px){
     #ecomsur-logo{
         width: 128px;
         height: 48px;
@@ -209,5 +223,41 @@ footer a:hover{
         width: 100%;
         margin-left: 35px;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 575px ){
+    h1{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 340px){
+    #search-country{
+        margin-left: 1px;
+        width: 200px;
+        height: 50px;
+    }
+
+    #search-submit{
+        width: 80px;
+        height: 50px;
+    }
+    #content{
+        margin-top: 25px;
+    }
+    #col{
+        width: 100%;
+        height: 100px;
+        margin-bottom: 8px;
+    }
+    #col-2{
+        margin-left: 20px;
+        width: 50%;
+    }
+    #col-3{
+        float: left;
+        width: 40%;
+        margin-left: 5px;
     }
 }
