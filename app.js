@@ -1,5 +1,7 @@
 function showInfo(response) {
     console.log(response);
+    document.querySelector("#col").style.display = "block";
+    document.querySelector("#col-2").style.display = "block";
     document.querySelector("#region").innerHTML = ` ${response[0].region}`;
     document.querySelector("#country").innerHTML = ` ${response[0].name}`;
     document.querySelector("#subregion").innerHTML = ` ${response[0].subregion}`;
@@ -11,15 +13,15 @@ function showInfo(response) {
         title.appendChild(document.createTextNode("Borders:"));
         limit.append(title);
         let border = data.map(limits => {
-            fetch(`https://restcountries.eu/rest/v2/alpha/${limits}`,{
-                method: 'GET'
-            }).then(response => response.json())
-            .then((country) => {
-                let countryName = country.name;
-                let li = document.createElement("li");
-                li.appendChild(document.createTextNode(countryName));
-                limit.append(li);
-            })
+            fetch(`https://restcountries.eu/rest/v2/alpha/${limits}`, {
+                    method: 'GET'
+                }).then(response => response.json())
+                .then((country) => {
+                    let countryName = country.name;
+                    let li = document.createElement("li");
+                    li.appendChild(document.createTextNode(countryName));
+                    limit.append(li);
+                })
         });
     } else {
         limit.innerHTML = "No borders";
@@ -31,18 +33,26 @@ function showInfo(response) {
     document.querySelector("#flag").setAttribute("alt", response[0].name);
     document.querySelector("#currency-name").innerHTML = ` ${response[0].currencies[0].name}`;
     document.querySelector("#currency-symbol").innerHTML = ` ${response[0].currencies[0].symbol}`;
+    document.querySelector("#empty").style.display = "none";
 }
 
 function searchCountry(country) {
     let apiUrl = `https://restcountries.eu/rest/v2/name/${country}`;
-    fetch(apiUrl,{
-        method: 'GET'
-    }).then(function(response) {
-        return response.json();
-    })
-    .then(function(myJson) {
-        showInfo(myJson);
-    });
+    fetch(apiUrl, {
+            method: 'GET'
+        }).then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            if (myJson.status == 404) {
+                console.log(myJson);
+                document.querySelector("#empty").style.display = "block";
+                document.querySelector("#col").style.display = "none";
+                document.querySelector("#col-2").style.display = "none";
+                return;
+            }
+            showInfo(myJson);
+        });
 
 }
 
@@ -57,5 +67,3 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
-searchCountry("China");

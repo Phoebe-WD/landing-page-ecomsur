@@ -31,6 +31,14 @@ h2{
     color: white;
     text-shadow: 2px 1px 5px rgba(150, 150, 150, 1);
 }
+#empty{
+    display: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
 
 form{
     display: flex;
@@ -70,6 +78,7 @@ form{
 }
 
 #col{
+    display: none;
     width: 55%;
     height: 200px;
     float: left;
@@ -78,6 +87,7 @@ form{
 }
 
 #col-2{
+    display: none;
     width: 25%;
     float: left;
     justify-content: center;
@@ -229,6 +239,16 @@ footer a:hover{
 @media screen and (max-width: 575px ){
     h1{
         margin-right: 10px;
+    }
+    #col{
+        width: 50%;
+    }
+    #col-2{
+        margin-left: 30px;
+        width: 30%;
+    }
+    #flag{
+        margin-left: 30px;
     }
 }
 
