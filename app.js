@@ -45,6 +45,7 @@ function searchCountry(country) {
             return response.json();
         })
         .then(function (myJson) {
+            document.querySelector("#search-submit").removeAttribute("disabled");
             if (myJson.status == 404) {
                 console.log(myJson);
                 document.querySelector("#empty").style.display = "block";
@@ -62,8 +63,10 @@ function search(event) {
     let country = document.querySelector("#search-country").value;
     let limit = document.querySelector("#limitations");
     limit.innerHTML = null;
+    document.querySelector("#search-submit").setAttribute("disabled", "disabled");
     searchCountry(country);
 }
+
 
 
 let form = document.querySelector("#search-form");
