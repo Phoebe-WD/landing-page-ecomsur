@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Countries of the World</title>
+  </head>
+  <body>
+    <header>
+      <img src="#" alt="world" />
+      <h1>Countries of the World</h1>
+    </header>
+    <main>
+      <section id="content-form">
+        <form action="#" method="GET" id="search-form">
+          <input
+            type="search"
+            name="search-country"
+            id="search-country"
+            placeholder="Search for a country"
+          />
+          <input
+            type="submit"
+            value="Search 🌎"
+            class="btn-search"
+            id="search-submit"
+          />
+        </form>
+      </section>
+      <section id="content">
+        <h2 id="country"></h2>
+        <img src="" alt="" id="flag" />
+        <h3 id="capital"></h3>
+        <p id="region"></p>
+        <p id="subregion"></p>
+        <p id="language"></p>
+        <ol id="limitations"></ol>
+        <p id="currency-name"></p>
+        <p id="currency-symbol"></p>
+      </section>
+    </main>
+    <footer>
+      Made by
+      <a href="https://www.linkedin.com/in/phoebe-wilckens/" id="name"
+        >Phoebe W.</a
+      >
+      <br />
+      <a href="https://github.com/Phoebe-WD/" id="source-code"
+        >open-source code</a
+      >
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
