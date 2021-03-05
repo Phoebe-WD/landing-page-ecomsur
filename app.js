@@ -28,6 +28,7 @@ function showInfo(response) {
     document.querySelector("#language").innerHTML = response[0].languages[0].name;
     let min = response[0].alpha3Code.toLowerCase();
     document.querySelector("#flag").setAttribute("src", `https://restcountries.eu/data/${min}.svg`);
+    document.querySelector("#flag").setAttribute("alt", response[0].name);
     document.querySelector("#currency-name").innerHTML = response[0].currencies[0].name;
     document.querySelector("#currency-symbol").innerHTML = response[0].currencies[0].symbol;
 }
