@@ -24,7 +24,9 @@ function showInfo(response) {
                 })
         });
     } else {
-        limit.innerHTML = "No borders";
+        let title = document.createElement("p");
+        title.appendChild(document.createTextNode("No Borders"));
+        limit.append(title);
     }
 
     document.querySelector("#language").innerHTML = ` ${response[0].languages[0].name}`;

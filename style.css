@@ -151,7 +151,9 @@ ul p {
 }
 
 #limitations {
+
     padding: 0;
+    color: white;
 }
 
 footer {
@@ -168,6 +170,7 @@ footer {
 #despegar-logo {
     width: 100px;
     height: 30px;
+    margin-top: 20px;
     margin-bottom: 13px;
 }
 
@@ -200,7 +203,6 @@ footer a:hover {
     }
 
     h1 {
-        margin-right: 70px;
         font-size: 28px;
         margin-top: 45px;
         text-align: center;
@@ -216,6 +218,17 @@ footer a:hover {
     }
 
     #search-country {
+        margin-left: -50px;
+    }
+    #col{
+        width: 100%;
+    }
+    #col-2{
+        width: 50%;
+        margin-left: 120px;
+    }
+    #col-3{ 
+        width: 40%;
         margin-left: -50px;
     }
 }
