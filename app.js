@@ -34,7 +34,7 @@ function showInfo(response) {
 }
 
 function searchCountry(country) {
-    let apiUrl = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`;
+    let apiUrl = `https://restcountries.eu/rest/v2/name/${country}`;
     fetch(apiUrl,{
         method: 'GET'
     }).then(function(response) {
