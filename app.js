@@ -1,5 +1,4 @@
 function showInfo(response) {
-    console.log(response);
     document.querySelector("#col").style.display = "block";
     document.querySelector("#col-2").style.display = "block";
     document.querySelector("#region").innerHTML = ` ${response[0].region}`;
