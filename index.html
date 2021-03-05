@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <img src="#" alt="world" />
+      <img src="./img/Eco-Logo.png" alt="ecomsur logo" id="ecomsur-logo" />
       <h1>Before travelling, know more about your destination</h1>
     </header>
     <main>
@@ -21,7 +21,7 @@
             type="search"
             name="search-country"
             id="search-country"
-            placeholder="Search for a country"
+            placeholder="Search for a country..."
           />
           <input
             type="submit"
@@ -32,23 +32,42 @@
         </form>
       </section>
       <section id="content">
-        <h2 id="country"></h2>
-        <img src="" alt="" id="flag" />
-        <h3 id="capital"></h3>
-        <p id="region"></p>
-        <p id="subregion"></p>
-        <p id="language"></p>
-        <ol id="limitations"></ol>
-        <p id="currency-name"></p>
-        <p id="currency-symbol"></p>
+        <div id="col">
+          <img src="" alt="" id="flag" />
+        </div>
+        <div id="col-2">
+          <ul>
+            <li id="country-name">Country:<span id="country"></span></li>
+            <li id="capital-name">Capital:<span id="capital"></span></li>
+            <li id="region-name">Region:<span id="region"></span></li>
+            <li id="subregion-name">Subregion:<span id="subregion"></span></li>
+            <li id="language-name">Language:<span id="language"></span></li>
+            <li id="currency">
+              Currency name:<span id="currency-name"></span>
+            </li>
+            <li id="currency-logo">
+              Currency symbol:<span id="currency-symbol"></span>
+            </li>
+          </ul>
+        </div>
+        <div id="col-3">
+          <ul id="limitations"></ul>
+        </div>
       </section>
     </main>
     <footer>
+      <img src="./img/airbnb-logo.png" alt="airbnb logo" id="airbnb-logo" />
+      <img
+        src="./img/Logo-Despegar.png"
+        alt="despegar logo"
+        id="despegar-logo"
+      />
+      <br />
       Made by
       <a href="https://www.linkedin.com/in/phoebe-wilckens/" id="name"
         >Phoebe W.</a
       >
-      <br />
+      -
       <a
         href="https://github.com/Phoebe-WD/landing-page-ecomsur"
         id="source-code"

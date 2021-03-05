@@ -1,9 +1,9 @@
 function showInfo(response) {
     console.log(response);
-    document.querySelector("#region").innerHTML = ` Region: ${response[0].region}`;
-    document.querySelector("#country").innerHTML = response[0].name;
-    document.querySelector("#subregion").innerHTML = response[0].subregion;
-    document.querySelector("#capital").innerHTML = response[0].capital;
+    document.querySelector("#region").innerHTML = ` ${response[0].region}`;
+    document.querySelector("#country").innerHTML = ` ${response[0].name}`;
+    document.querySelector("#subregion").innerHTML = ` ${response[0].subregion}`;
+    document.querySelector("#capital").innerHTML = ` ${response[0].capital}`;
     let limit = document.querySelector("#limitations");
     let data = response[0].borders;
     if (data.length > 0) {
@@ -25,12 +25,12 @@ function showInfo(response) {
         limit.innerHTML = "No borders";
     }
 
-    document.querySelector("#language").innerHTML = response[0].languages[0].name;
+    document.querySelector("#language").innerHTML = ` ${response[0].languages[0].name}`;
     let min = response[0].alpha3Code.toLowerCase();
     document.querySelector("#flag").setAttribute("src", `https://restcountries.eu/data/${min}.svg`);
     document.querySelector("#flag").setAttribute("alt", response[0].name);
-    document.querySelector("#currency-name").innerHTML = response[0].currencies[0].name;
-    document.querySelector("#currency-symbol").innerHTML = response[0].currencies[0].symbol;
+    document.querySelector("#currency-name").innerHTML = ` ${response[0].currencies[0].name}`;
+    document.querySelector("#currency-symbol").innerHTML = ` ${response[0].currencies[0].symbol}`;
 }
 
 function searchCountry(country) {
@@ -57,3 +57,5 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+searchCountry("China");
