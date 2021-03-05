@@ -182,7 +182,7 @@ footer a:hover {
 }
 
 
-#spinner{
+#spinner {
     display: none;
     margin: 0 auto;
     border: 15px solid #848484;
@@ -193,9 +193,14 @@ footer a:hover {
     animation: spin 2s linear infinite;
 }
 
-@keyframes spin{
-    0% { transform: rotate(0deg);}
-    100%{ transform: rotate(360deg);}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
